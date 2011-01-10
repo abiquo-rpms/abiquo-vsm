@@ -2,12 +2,12 @@
 
 Name:     abiquo-vsm
 Version: 1.7
-Release: 2%{?dist}%{?buildstamp}
+Release:  3%{?dist}%{?buildstamp}
 Summary:  Abiquo Virtual System Monitor
 Group:    Development/System 
 License:  Multiple 
 URL:      http://www.abiquo.com 
-Source0:  %{name}-%{version}.tar.gz
+Source0:  vsm.war
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: abiquo-core
 
@@ -20,18 +20,11 @@ This package includes software developed by third-party.
 Make sure that you read the license agrements in /usr/share/doc/abiquo-core licenses before using this software.
 
 
-%prep
-%setup -q
-
-%build
-
-
 %install
 rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/%{abiquo_basedir}/tomcat/webapps/
 mkdir -p $RPM_BUILD_ROOT/%{_docdir}/%{name}
-cp -r . $RPM_BUILD_ROOT/%{abiquo_basedir}/tomcat/webapps/vsm
-
+/usr/bin/unzip -d $RPM_BUILD_ROOT/%{abiquo_basedir}/tomcat/webapps/vsm/ %{SOURCE0}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -41,6 +34,9 @@ rm -rf $RPM_BUILD_ROOT
 %{abiquo_basedir}/tomcat/webapps/vsm
 
 %changelog
+* Mon Jan 10 2011 Sergio Rubio <srubio@abiquo.com> - 1.7-3
+- use WAR as Source0
+
 * Tue Dec 14 2010 Sergio Rubio <srubio@abiquo.com> - 1.7-2
 - use the new build system
 
