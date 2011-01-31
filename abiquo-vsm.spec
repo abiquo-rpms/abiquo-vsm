@@ -2,7 +2,7 @@
 
 Name:     abiquo-vsm
 Version: 1.7
-Release:  3%{?dist}%{?buildstamp}
+Release:  4.GA%{?dist}%{?buildstamp}
 Summary:  Abiquo Virtual System Monitor
 Group:    Development/System 
 License:  Multiple 
@@ -34,6 +34,9 @@ rm -rf $RPM_BUILD_ROOT
 %{abiquo_basedir}/tomcat/webapps/vsm
 
 %changelog
+* Mon Jan 31 2011 Sergio Rubio <srubio@abiquo.com> - 1.7-4.GA
+- GA build
+
 * Mon Jan 10 2011 Sergio Rubio <srubio@abiquo.com> - 1.7-3
 - use WAR as Source0
 
