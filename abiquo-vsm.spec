@@ -2,7 +2,7 @@
 
 Name:     abiquo-vsm
 Version: 1.7
-Release:  5.GA%{?dist}%{?buildstamp}
+Release:  6%{?dist}%{?buildstamp}
 Summary:  Abiquo Virtual System Monitor
 Group:    Development/System 
 License:  Multiple 
@@ -10,6 +10,7 @@ URL:      http://www.abiquo.com
 Source0:  vsm.war
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: abiquo-core
+BuildArch: noarch
 
 %description
 Next Generation Cloud Management Solution
@@ -34,6 +35,9 @@ rm -rf $RPM_BUILD_ROOT
 %{abiquo_basedir}/tomcat/webapps/vsm
 
 %changelog
+* Mon Feb 14 2011 Sergio Rubio <srubio@abiquo.com> - 1.7-6
+- updated release string
+
 * Thu Feb 03 2011 Sergio Rubio <srubio@abiquo.com> - 1.7-5.GA
 - upstream fixes 
 
