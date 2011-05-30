@@ -1,7 +1,7 @@
 %define abiquo_basedir /opt/abiquo
 
 Name:     abiquo-vsm
-Version: 1.7.6
+Version:  1.8
 Release:  1%{?dist}%{?buildstamp}
 Summary:  Abiquo Virtual System Monitor
 Group:    Development/System 
@@ -35,6 +35,9 @@ rm -rf $RPM_BUILD_ROOT
 %{abiquo_basedir}/tomcat/webapps/vsm
 
 %changelog
+* Mon May 30 2011 Sergio Rubio <srubio@abiquo.com> - 1.8-1
+- updated to 1.8
+
 * Thu Apr 14 2011 Sergio Rubio <srubio@abiquo.com> - 1.7.6-1
 - bumped version
 
