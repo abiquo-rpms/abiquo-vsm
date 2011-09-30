@@ -1,8 +1,8 @@
 %define abiquo_basedir /opt/abiquo
 
 Name:     abiquo-vsm
-Version:  1.8
-Release:  1%{?dist}%{?buildstamp}
+Version:  1.8.5
+Release:  0%{?dist}%{?buildstamp}
 Summary:  Abiquo Virtual System Monitor
 Group:    Development/System 
 License:  Multiple 
